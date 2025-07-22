@@ -9,7 +9,7 @@ SHELL	:= bash
 #                                     NAMES                                    #
 #==============================================================================#
 
-NAME			= whatever
+NAME			= Array
 
 ###	Message Vars
 _NAME			= [$(MAG)cpp$(D)]
