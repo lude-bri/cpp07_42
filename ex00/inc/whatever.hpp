@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 18:30:26 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/07/22 18:42:00 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/07/22 18:44:58 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ template<typename T> void swap(T &a, T &b) {
 	b = tmp;
 }
 
-template<typename T>void min(T &a, T &b) {
+template<typename T>T min(T &a, T &b) {
 	return (a < b ? a : b);
 }
 
-template<typename T>void max(T &a, T &b) {
+template<typename T>T max(T &a, T &b) {
 	return (a > b ? a : b);
 }

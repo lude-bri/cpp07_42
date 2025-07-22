@@ -6,11 +6,11 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 18:30:33 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/07/22 18:38:19 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/07/22 18:43:36 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "../inc/whatever.hpp"
 
 int main (void) {
 	
