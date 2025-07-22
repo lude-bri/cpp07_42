@@ -9,7 +9,7 @@ SHELL	:= bash
 #                                     NAMES                                    #
 #==============================================================================#
 
-NAME			= whatever
+NAME			= iter 
 
 ###	Message Vars
 _NAME			= [$(MAG)cpp$(D)]
