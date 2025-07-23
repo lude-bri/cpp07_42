@@ -32,25 +32,39 @@ protected:
 
 public:
 	//Construction with no parameter
-	Array() {
+	Array() : _array(nullptr), _len(0) {
 		DEBUG_MSG("A Constructor for Array was called"); 
 	}
 
 	//Constructor with an usigned int n as parameter
-	Array(unsigned int n) {
+	Array(unsigned int n) : _len(n) {
 		DEBUG_MSG("A Parametric Constructor for Array was called");
 		_array = new T[n]();
 	}
 
 	//Copy Constructor
-	Array(const Array &copy){
+	Array(const Array &copy) : _array(nullptr), _len(copy._len) {
 		DEBUG_MSG("A Copy Constructor for Array was called");
+		
+		_array = new T[copy.size()];
+		for (int i = 0; i < this->_len; i++)
+			_array[i] = copy._array[i];
+		*this = copy;
 	}
 
 	//Assignment Operator
 	Array &operator=(const Array &copy){
 		DEBUG_MSG("An Assignment Operator for Array was called");
-
+	
+		if (this != &copy) {
+			if (_array)
+				delete [] _array;
+			_array = new T[copy.size()];
+			for (int i = 0; i < _len; i++)
+				_array[i] = copy._array[i];
+			_len = copy.size();
+		}
+		return *this;
 	}
 
 	//Destructor
@@ -58,5 +72,21 @@ public:
 		DEBUG_MSG("A Destructor for Array was called");
 	}
 
+	//Operator []
+	T	&operator[](unsigned int index) {
+		DEBUG_MSG("A [] Operator for Array was called");
+		if (index >= this->_len)
+			throw std::exception();
+		return this->_array[index];
+	}
 
+	//Out of Bounds class
+	class OutOfBoundsException : public std::exception {
+		virtual const char *what() const throw() {
+			return "Index out of bounds";
+		}
+	};
+
+	//Size member function
+	unsigned int	size() const { return _len; }
 };
