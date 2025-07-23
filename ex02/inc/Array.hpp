@@ -12,15 +12,22 @@
 
 #pragma once
 
+//LIBRARIES
 #include <iostream>
 #include <string>
 
+//DEBUG MODE
 #ifdef DEBUG
 # define DEBUG_MSG(x) std::cout << "[DEBUG] : " << x << std::endl
 #else
 # define DEBUG_MSG(x)
 #endif
 
+//COLORS
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define YELLOW "\033[33m"
+#define RESET "\033[0m"
 
 template<typename T>
 class Array {
