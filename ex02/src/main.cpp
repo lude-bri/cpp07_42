@@ -8,12 +8,6 @@
 /*   Created: 2025/07/23 13:01:44 by lude-bri          #+#    #+#             */
 /*   Updated: 2025/07/23 13:01:46 by lude-bri         ###   ########.fr       */
 /*                                                                            */
-
-            bool elementsCorrect = true;
-            for (unsigned int i = 0; i < intArray.size(); i++) {
-                if (intArray[i] != i * 10) {
-                    elementsCorrect = false;
-                    break;
 /* ************************************************************************** */
 
 #include "../inc/Array.hpp"
